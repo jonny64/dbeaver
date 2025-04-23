@@ -165,7 +165,7 @@ public class OpenAICompletionEngine implements DAICompletionEngine {
 
     protected OpenAIClient createClient() throws DBException {
         return new OpenAIClient(
-            "https://api.openai.com/v1/",
+            "http://openai.local/v1/",
             List.of(new OpenAIRequestFilter(OpenAISettings.INSTANCE.token()))
         );
     }
